@@ -28,3 +28,12 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## To Do
 add a video player package to the project, possibly this one https://www.npmjs.com/package/mat-video
+
+
+## How to run
+1. make sure you have angular/cli@1.7.4 installed
+>npm install -g @angular/cli@1.7.4
+>npm install
+
+2. Run server and automatically open a browser
+>ng serve -o 
