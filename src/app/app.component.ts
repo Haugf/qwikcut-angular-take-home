@@ -1,4 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ViewEncapsulation, ViewChild, ElementRef, PipeTransform, Pipe, OnInit } from '@angular/core';
+
+// Media class
+export interface IMedia {
+  clipnumber: number;
+  url: string;
+  personnel: string;
+  down: number;
+  distance: number;
+}
 
 @Component({
   selector: 'app-root',
@@ -7,7 +16,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent {
   title = 'QwikCut-Evaluation';
-  clips: Array<any> = [
+
+  clips: Array<IMedia> = [
     {
       clipnumber: 1,
       url: 'https://d2htis0rx2m2xo.cloudfront.net/dev_uploads/10955/1.mp4',
@@ -66,4 +76,11 @@ export class AppComponent {
     }
   ]
 
+  currentIndex = 1;
+  currentItem: IMedia = this.clips[ this.currentIndex ];
+
+  onClickPlaylistItem(item: IMedia, index) {
+      this.currentIndex = index;
+      this.currentItem = item;
+  }
 }
