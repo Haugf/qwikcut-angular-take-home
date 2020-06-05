@@ -40,7 +40,6 @@ add a video player package to the project, possibly this one https://www.npmjs.c
 
 
 ## Test Plan
-Unfortuntely I did not get to begin learning karma
 
 If I had more time to test I would 
 1. Send in an empty array into the app component
@@ -52,4 +51,7 @@ If I were to develop this appp further
 1. Add a 5 second timer between video clips
 2. Add a plot graph comparing current video stats to average of all stats
 3. The abilty for the user to add comments to clips
+    a. I would have attempted to create a seperate component for this
+4. I'd like to make the cards for each clip rasied 
+5. Execute my test plan and begin learning Karma
 

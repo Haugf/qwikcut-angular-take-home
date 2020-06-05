@@ -1,39 +1,35 @@
 <div class="bg">
 
-<span class="border border-light">
-
-
+<!-- Much simpler video tag -->
         <video controls (click)="toggleVideo()" #videoPlayer (ended)="nextVideo()" style="display:block; margin:0 auto;">
             <source [src]="currentItem.url" type="video/mp4" />
             Browser not supported
         </video>
 
-</span>
-  <!-- Display the clip data on the video player -->
 
-
+<!-- Angular html method that loops through the array of video clips -->
   <div *ngFor="let item of clips; let $index = index"
       class='btn'
       (click)="onClickPlaylistItem(item, $index)"
       [class.selected]="item === currentItem">
-  <span class="box">
-      <div class="card box-shadow" style="width: 32rem;">
-        <div class="card-body">
-          <h5 class="card-title">Clip Number {{ item.clipnumber }}</h5>
-          <p class="card-text">Personnel: {{ item.personnel }}</p>
-          <p class="card-text">Down: {{ item.down }}</p>
-          <p class="card-text">Distance: {{ item.distance }}</p>
-          <a href="#" class="btn btn-primary">Go to video player</a>
-        </div>
-      </div>
-  </span>
+      <span class="box">
+          <div class="card box-shadow" style="width: 32rem;">
+            <div class="card-body">
+              <h5 class="card-title">Clip Number {{ item.clipnumber }}</h5>
+              <p class="card-text">Personnel: {{ item.personnel }}</p>
+              <p class="card-text">Down: {{ item.down }}</p>
+              <p class="card-text">Distance: {{ item.distance }}</p>
+              <a href="#" class="btn btn-primary" (click)="addfield()">Add a comment</a>
+            </div>
+          </div>
+      </span>
   </div>
 
 
 <!--The content below is only a placeholder and should be replaced.-->
 <div style="text-align:center">
   <h1>
-    Welcome to {{ title }}!
+    Thank you for checking out my {{ title }}!
   </h1>  
   <!-- <iframe width="420" height="345" [src]="video | safe"> -->
   <img width="300" alt="Angular Logo" src="https://qwikbox.s3.amazonaws.com/qwikcut-store-listing-logo.png">

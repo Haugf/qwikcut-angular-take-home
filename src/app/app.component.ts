@@ -16,10 +16,14 @@ export interface IMedia {
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
+
   title = 'QwikCut-Evaluation';
   api: VgAPI;
   @ViewChild('videoPlayer') videoplayer: ElementRef;
 
+
+  
   clips: Array<IMedia> = [
     {
       clipnumber: 1,
@@ -82,6 +86,8 @@ export class AppComponent {
   currentIndex = 0;
   currentItem: IMedia = this.clips[ this.currentIndex ];
 
+
+  // Changes the video and refreshes the videoplayer
   onClickPlaylistItem(item: IMedia, index) {
       this.currentIndex = index;
       this.currentItem = item;
@@ -89,8 +95,8 @@ export class AppComponent {
 
   }
 
-  
 
+  // Automatically moves to the next video if one is available
   nextVideo() {
     this.currentIndex++;
 
@@ -104,9 +110,12 @@ export class AppComponent {
 
 }
 
+  // This was the start of my comment functional
+  addfield(event: any) {
+    
+}
 
-
-
+  //For pausing and playing videos
  toggleVideo(event: any) {
      this.videoplayer.nativeElement.play();
  }
