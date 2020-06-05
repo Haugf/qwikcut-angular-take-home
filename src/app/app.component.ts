@@ -94,13 +94,14 @@ export class AppComponent {
   nextVideo() {
     this.currentIndex++;
 
-    if (this.currentIndex === this.clips.length) {
-        this.currentIndex = 0;
+    if (this.currentIndex < this.clips.length) {
+      this.currentItem = this.clips[ this.currentIndex ];
+      this.videoplayer.nativeElement.load();
+      this.videoplayer.nativeElement.play();
     }
 
-    this.currentItem = this.clips[ this.currentIndex ];
-    this.videoplayer.nativeElement.load();
-    this.videoplayer.nativeElement.play();
+    this.currentIndex = this.clips.length+1;
+
 }
 
 
