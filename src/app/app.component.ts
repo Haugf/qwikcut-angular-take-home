@@ -1,4 +1,5 @@
 import { Component, ViewEncapsulation, ViewChild, ElementRef, PipeTransform, Pipe, OnInit } from '@angular/core';
+import { VgAPI } from 'videogular2/compiled/core';
 
 // Media class
 export interface IMedia {
@@ -16,6 +17,7 @@ export interface IMedia {
 })
 export class AppComponent {
   title = 'QwikCut-Evaluation';
+  api: VgAPI;
 
   clips: Array<IMedia> = [
     {
@@ -76,11 +78,39 @@ export class AppComponent {
     }
   ]
 
-  currentIndex = 1;
+  currentIndex = 0;
   currentItem: IMedia = this.clips[ this.currentIndex ];
 
   onClickPlaylistItem(item: IMedia, index) {
       this.currentIndex = index;
       this.currentItem = item;
   }
+
+  onPlayerReady(api: VgAPI) {
+    this.api = api;
+
+    this.api.getDefaultMedia().subscriptions.loadedMetadata.subscribe(this.playVideo.bind(this));
+    this.api.getDefaultMedia().subscriptions.ended.subscribe(this.nextVideo.bind(this));
+  }
+
+  nextVideo() {
+    this.currentIndex++;
+
+    if (this.currentIndex === this.clips.length) {
+        this.currentIndex = 0;
+    }
+
+    this.currentItem = this.clips[ this.currentIndex ];
+}
+
+  playVideo() {
+    this.currentIndex++;
+ 
+    if (this.currentIndex === this.clips.length) {
+        this.currentIndex = 0;
+    }
+
+    this.currentItem = this.clips[ this.currentIndex ];
+ }
+
 }
