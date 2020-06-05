@@ -37,3 +37,19 @@ add a video player package to the project, possibly this one https://www.npmjs.c
 
 2. Run server and automatically open a browser
 >ng serve -o 
+
+
+## Test Plan
+Unfortuntely I did not get to begin learning karma
+
+If I had more time to test I would 
+1. Send in an empty array into the app component
+2. Learn how to develop a status checker before running the app.component.html code
+    This would inform the user what error occured
+
+## Further Development
+If I were to develop this appp further
+1. Add a 5 second timer between video clips
+2. Add a plot graph comparing current video stats to average of all stats
+3. The abilty for the user to add comments to clips
+
