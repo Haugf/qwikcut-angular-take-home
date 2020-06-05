@@ -1,38 +1,19 @@
 <div class="bg">
 
 <span class="border border-light">
-    <vg-player>
 
-      <vg-controls>
-        <vg-play-pause></vg-play-pause>
-          <vg-time-display vgProperty="current" vgFormat="mm:ss"></vg-time-display>
-          <vg-scrub-bar>
-              <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
-              <vg-scrub-bar-buffering-time></vg-scrub-bar-buffering-time>
-          </vg-scrub-bar>
-          <vg-time-display vgProperty="total" vgFormat="mm:ss"></vg-time-display>
-          <vg-mute></vg-mute>
-          <vg-volume></vg-volume>
-          <vg-fullscreen></vg-fullscreen>
-      </vg-controls>
-    
-      <video 
-        [vgMedia]="media"
-        [src]="currentItem.url"
-        id="singleVideo"
-        type="video/mp4">
-      </video>
 
-    </vg-player>
+        <video controls (click)="toggleVideo()" #videoPlayer (ended)="nextVideo()" style="display:block; margin:0 auto;">
+            <source [src]="currentItem.url" type="video/mp4" />
+            Browser not supported
+        </video>
+
 
 </span>
   <!-- Display the clip data on the video player -->
   <h2>
     {{currentItem | json}}
   </h2>
-
-
-
 
   <div *ngFor="let item of clips; let $index = index"
       class='btn'
