@@ -37,7 +37,7 @@
   dependencies:
     tslib "^1.7.1"
 
-"@angular/cli@1.7.4":
+"@angular/cli@^1.7.4":
   version "1.7.4"
   resolved "https://registry.yarnpkg.com/@angular/cli/-/cli-1.7.4.tgz#b6c31b5fc6f8ea07e55b1b01a26422f5358a4ea6"
   integrity sha512-URdb1QtnQf+Ievy93wjq7gE81s25BkWUwJFPey+YkphBA3G1lbCAQPiEh2pntBwaIKavgEuCw+Sf2YZdgTVhDA==
@@ -213,6 +213,11 @@
     rxjs "^5.5.6"
     semver "^5.3.0"
     semver-intersect "^1.1.2"
+
+"@types/core-js@^2.5.3":
+  version "2.5.4"
+  resolved "https://registry.yarnpkg.com/@types/core-js/-/core-js-2.5.4.tgz#fc42ebde7d9cfa7c5f2668f117449b02348e41fd"
+  integrity sha512-Xwy8o12ak+iYgFr/KCVaVK5Sy+jFMiiPAID3+ObvMlBzy26XQJw5xu+a6rlHsrJENXj/AwJOGsJpVohUjAzSKQ==
 
 "@types/jasmine@*":
   version "3.5.10"
@@ -7778,6 +7783,11 @@ verror@1.10.0:
     core-util-is "1.0.2"
     extsprintf "^1.2.0"
 
+videogular2@6.0.1:
+  version "6.0.1"
+  resolved "https://registry.yarnpkg.com/videogular2/-/videogular2-6.0.1.tgz#461a4f8f633dca24943804d44910972999de799a"
+  integrity sha1-RhpPj2M9yiSUOATUSRCXKZneeZo=
+
 vlq@^0.2.2:
   version "0.2.3"
   resolved "https://registry.yarnpkg.com/vlq/-/vlq-0.2.3.tgz#8f3e4328cf63b1540c0d67e1b2778386f8975b26"
@@ -7903,9 +7913,9 @@ webpack-sources@^1.0.0, webpack-sources@^1.0.1, webpack-sources@^1.1.0, webpack-
     source-map "~0.6.1"
 
 webpack-subresource-integrity@^1.0.1:
-  version "1.4.1"
-  resolved "https://registry.yarnpkg.com/webpack-subresource-integrity/-/webpack-subresource-integrity-1.4.1.tgz#e8bf918b444277df46a66cd84542cbcdc5a6272d"
-  integrity sha512-XMLFInbGbB1HV7K4vHWANzc1CN0t/c4bBvnlvGxGwV45yE/S/feAXIm8dJsCkzqWtSKnmaEgTp/meyeThxG4Iw==
+  version "1.5.1"
+  resolved "https://registry.yarnpkg.com/webpack-subresource-integrity/-/webpack-subresource-integrity-1.5.1.tgz#6f44ea99987266b70c4ec42ac51064d33e982277"
+  integrity sha512-uekbQ93PZ9e7BFB8Hl9cFIVYQyQqiXp2ExKk9Zv+qZfH/zHXHrCFAfw1VW0+NqWbTWrs/HnuDrto3+tiPXh//Q==
   dependencies:
     webpack-sources "^1.3.0"
 
