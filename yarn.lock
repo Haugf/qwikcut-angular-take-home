@@ -37,7 +37,7 @@
   dependencies:
     tslib "^1.7.1"
 
-"@angular/cli@1.7.4":
+"@angular/cli@^1.7.4":
   version "1.7.4"
   resolved "https://registry.yarnpkg.com/@angular/cli/-/cli-1.7.4.tgz#b6c31b5fc6f8ea07e55b1b01a26422f5358a4ea6"
   integrity sha512-URdb1QtnQf+Ievy93wjq7gE81s25BkWUwJFPey+YkphBA3G1lbCAQPiEh2pntBwaIKavgEuCw+Sf2YZdgTVhDA==
@@ -213,6 +213,11 @@
     rxjs "^5.5.6"
     semver "^5.3.0"
     semver-intersect "^1.1.2"
+
+"@types/core-js@^2.5.3":
+  version "2.5.4"
+  resolved "https://registry.yarnpkg.com/@types/core-js/-/core-js-2.5.4.tgz#fc42ebde7d9cfa7c5f2668f117449b02348e41fd"
+  integrity sha512-Xwy8o12ak+iYgFr/KCVaVK5Sy+jFMiiPAID3+ObvMlBzy26XQJw5xu+a6rlHsrJENXj/AwJOGsJpVohUjAzSKQ==
 
 "@types/jasmine@*":
   version "3.5.10"
@@ -7778,6 +7783,11 @@ verror@1.10.0:
     core-util-is "1.0.2"
     extsprintf "^1.2.0"
 
+videogular2@6.0.1:
+  version "6.0.1"
+  resolved "https://registry.yarnpkg.com/videogular2/-/videogular2-6.0.1.tgz#461a4f8f633dca24943804d44910972999de799a"
+  integrity sha1-RhpPj2M9yiSUOATUSRCXKZneeZo=
+
 vlq@^0.2.2:
   version "0.2.3"
   resolved "https://registry.yarnpkg.com/vlq/-/vlq-0.2.3.tgz#8f3e4328cf63b1540c0d67e1b2778386f8975b26"
@@ -8110,9 +8120,9 @@ xxhashjs@^0.2.1:
     cuint "^0.2.2"
 
 y18n@^3.2.1:
-  version "3.2.1"
-  resolved "https://registry.yarnpkg.com/y18n/-/y18n-3.2.1.tgz#6d15fba884c08679c0d77e88e7759e811e07fa41"
-  integrity sha1-bRX7qITAhnnA136I53WegR4H+kE=
+  version "3.2.2"
+  resolved "https://registry.yarnpkg.com/y18n/-/y18n-3.2.2.tgz#85c901bd6470ce71fc4bb723ad209b70f7f28696"
+  integrity sha512-uGZHXkHnhF0XeeAPgnKfPv1bgKAYyVvmNL1xlKsPYZPaIHxGti2hHqvOCQv71XMsLxu1QjergkqogUnms5D3YQ==
 
 y18n@^4.0.0:
   version "4.0.0"
